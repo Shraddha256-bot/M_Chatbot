@@ -1,0 +1,9 @@
+streamlit
+transformers
+torch
+speechrecognition
+pyttsx3
+deep-translator
+matplotlib
+gpt4all
+python-dotenv

@@ -1,0 +1,6 @@
+# Ignore environment and cache files
+venv/
+__pycache__/
+*.db
+.env
+*.pyc
