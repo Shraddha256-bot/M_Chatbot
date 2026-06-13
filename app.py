@@ -30,7 +30,7 @@ def detect_low_mood_streak(history):
 def load_model():
     return pipeline("text-classification",
                     model="bhadresh-savani/distilbert-base-uncased-emotion",
-                    return_all_scores=True)
+                    return_all_scores=True, device=-1)
 
 emotion_classifier = load_model()
 
@@ -126,7 +126,11 @@ if user_input:
     if short_reply:
         gpt_reply = short_reply
     else:
+        print("Before GPT4All")
         gpt_reply = generate_gpt4all_response(translated_input, emotion, st.session_state.chat_history, persona)
+        
+        
+        print("After GPT4All")
 
     if detected_lang == 'hi':
         try:
